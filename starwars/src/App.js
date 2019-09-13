@@ -13,9 +13,11 @@ const App = () => {
         axios.get("https://swapi.co/api/people/")
         .then((response) => {
           setCharacters(response.data.results);
+          setLoading(true);
         })
         .catch((error) => {
            return error;
+           setLoading(false);
         })   
   },[])
   //rendering the components
