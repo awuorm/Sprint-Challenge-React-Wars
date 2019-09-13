@@ -26,14 +26,16 @@ import Loading from "./components/Characters/Loading";
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      {isLoading?(<Loading/>):(
-      characters.map((character,index) => {
-        return (
-          <CharactersContent key={index} characters={character}/>
+      {isLoading?
+        (<Loading/>):
+        (characters.map((character,index) => {
+          return (
+            <CharactersContent 
+            key={index} 
+            characters={character}/>
           )
-        })
-      )
-    }
+          }))
+      }
     </div>
   );
 }
