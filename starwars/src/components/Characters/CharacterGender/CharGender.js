@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
+//styling the elements
+const CharGenderStyles = styled.p`
+font-family: 'Courier New', Courier, monospace;
+`;
+
 function CharactersGender (props) {
-    //styling the elements
-    const CharGenderStyles = styled.p`
-    font-family: 'Courier New', Courier, monospace;
-    `;
    //rendering the component
     return (
         <>

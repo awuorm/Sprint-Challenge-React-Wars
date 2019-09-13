@@ -7,8 +7,6 @@ font-family: 'Courier New', Courier, monospace;
 `;
 
 function CharName (props) {
-    console.log(props)
-
     return (
         <>
             <CharacterNameStyles>Name:{props.charname}</CharacterNameStyles>

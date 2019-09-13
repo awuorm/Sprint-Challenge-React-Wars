@@ -7,16 +7,17 @@ import CharactersMass from "./CharMass/CharMass";
 import CharactersGender from "./CharacterGender/CharGender";
 import CharactersHome from "./CharacterHome/CharHome";
 
-function CharactersContent (props) {
-    //styling the elements
-    const DivCharStyles = styled.div`
+//styling the elements
+const DivCharStyles = styled.div`
     background-color: skyblue;
     width: 50%;
     border: 0.8em solid grey;
     margin-left:25%;
     margin-bottom: 2em;
     margin-top: 2em;
-    `;
+`;
+
+function CharactersContent (props) {
     //rendering the components
     return (
                 <DivCharStyles>
