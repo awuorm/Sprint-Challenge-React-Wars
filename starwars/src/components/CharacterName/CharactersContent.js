@@ -11,17 +11,25 @@ import CharactersHome from "../CharacterHome/CharHome";
 function CharactersContent (props) {
     console.log(props.characters);
 
-    const DivCharStyles = styled.div``;
+    const DivCharStyles = styled.div`
+    background-color: skyblue;
+    width: 50%;
+    border: 0.8em solid grey;
+    margin-left:25%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+
+    `;
     //const {characters} = props;
 
     return (
-                < div>
+                <DivCharStyles>
                     <CharName charname={props.characters.name}/>
                     <CharactersHeight charheight={props.characters.height}/>
                     <CharactersMass charmass={props.characters.mass}/>
                     <CharactersGender chargender={props.characters.gender}/>
                     <CharactersHome charhome={props.characters.homeworld}/> 
-                </div>
+                </DivCharStyles>
     )
 }
 

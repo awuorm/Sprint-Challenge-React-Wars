@@ -6,7 +6,10 @@ import styled from "styled-components";
 function CharactersHome (props) {
     console.log(props);
 
-    const CharHomeStyles = styled.p``;
+    const CharHomeStyles = styled.p`
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+     `;
     //const {characters} = props;
 
     return (
