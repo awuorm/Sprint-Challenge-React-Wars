@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const CharacterNameStyles = styled.p``;
+const CharacterNameStyles = styled.p`
+font-family: 'Courier New', Courier, monospace;
+`;
 
 function CharName (props) {
     console.log(props)

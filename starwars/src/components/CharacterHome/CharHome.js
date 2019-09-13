@@ -8,7 +8,7 @@ function CharactersHome (props) {
 
     const CharHomeStyles = styled.p`
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: blue;
+    color: purple;
      `;
     //const {characters} = props;
 

@@ -6,7 +6,9 @@ import styled from "styled-components";
 function CharactersMass (props) {
     console.log(props);
 
-    const CharMassStyles = styled.p``;
+    const CharMassStyles = styled.p`
+    font-family: 'Courier New', Courier, monospace;
+    `;
     //const {characters} = props;
 
     return (
