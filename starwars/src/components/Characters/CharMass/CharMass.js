@@ -1,21 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-//import CharName from "./CharName";
-
+//styling the elements
 function CharactersMass (props) {
-    console.log(props);
-
     const CharMassStyles = styled.p`
     font-family: 'Courier New', Courier, monospace;
     `;
-    //const {characters} = props;
-
     return (
         <>
-            {
-                <CharMassStyles>Weight:{props.charmass} kg</CharMassStyles>
-            }
+         <CharMassStyles>Weight:{props.charmass} kg</CharMassStyles>
         </>
     )
 }

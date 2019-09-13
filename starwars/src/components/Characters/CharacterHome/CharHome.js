@@ -1,22 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-//import CharName from "./CharName";
-
 function CharactersHome (props) {
-    console.log(props);
-
+    //styling the components
     const CharHomeStyles = styled.p`
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: purple;
      `;
-    //const {characters} = props;
-
+     //rendering components
     return (
         <>
-            {
-                <CharHomeStyles>Homeworld:{props.charhome}</CharHomeStyles>
-            }
+           <CharHomeStyles>Homeworld:{props.charhome}</CharHomeStyles>
         </>
     )
 }

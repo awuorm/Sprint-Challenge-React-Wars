@@ -1,21 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-//import CharName from "./CharName";
-
 function CharactersGender (props) {
-    console.log(props);
-
+    //styling the elements
     const CharGenderStyles = styled.p`
     font-family: 'Courier New', Courier, monospace;
     `;
-    //const {characters} = props;
-
+   //rendering the component
     return (
         <>
-            {
-                <CharGenderStyles>Gender:{props.chargender}</CharGenderStyles>
-            }
+            <CharGenderStyles>Gender:{props.chargender}</CharGenderStyles>
         </>
     )
 }

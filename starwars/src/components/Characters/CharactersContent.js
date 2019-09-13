@@ -1,16 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import CharName from "./CharName";
-import CharactersHeight from "../CharHeight/CharacterHeight";
-import CharactersMass from "../CharMass/CharMass";
-import CharactersGender from "../CharacterGender/CharGender";
-import CharactersHome from "../CharacterHome/CharHome";
 
-//import CharName from "./CharName";
+import CharName from "./CharName/CharName";
+import CharactersHeight from "./CharHeight/CharacterHeight";
+import CharactersMass from "./CharMass/CharMass";
+import CharactersGender from "./CharacterGender/CharGender";
+import CharactersHome from "./CharacterHome/CharHome";
 
 function CharactersContent (props) {
-    console.log(props.characters);
-
+    //styling the elements
     const DivCharStyles = styled.div`
     background-color: skyblue;
     width: 50%;
@@ -18,10 +16,8 @@ function CharactersContent (props) {
     margin-left:25%;
     margin-bottom: 2em;
     margin-top: 2em;
-
     `;
-    //const {characters} = props;
-
+    //rendering the components
     return (
                 <DivCharStyles>
                     <CharName charname={props.characters.name}/>
