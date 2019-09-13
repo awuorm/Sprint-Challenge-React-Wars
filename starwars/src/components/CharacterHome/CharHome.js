@@ -3,19 +3,19 @@ import styled from "styled-components";
 
 //import CharName from "./CharName";
 
-function CharactersGender (props) {
+function CharactersHome (props) {
     console.log(props);
 
-    const CharGenderStyles = styled.p``;
+    const CharHomeStyles = styled.p``;
     //const {characters} = props;
 
     return (
         <>
             {
-                <CharGenderStyles>Gender:{props.chargender}</CharGenderStyles>
+                <CharHomeStyles>Homeworld:{props.charhome}</CharHomeStyles>
             }
         </>
     )
 }
 
-export default CharactersGender;
+export default CharactersHome;
