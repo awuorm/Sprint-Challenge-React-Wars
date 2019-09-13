@@ -30,11 +30,20 @@ React JS is a component User Interface library that is used for building single 
 
 - [ ] What does it mean to _think_ in react?
 
+To think in react is to look at your code in a modular way. It means approaching the user interface not just in terms of the elements that make up the page but the data that will be displayed and how the user interactions will affect the UI itself.
+
+
 - [ ] Describe state.
+
+State refers to data that can be changed depending on user interactions and network requests. State holds the data in memory until a certain action is triggered that will change the UI depending on the data stored.
 
 - [ ] Describe props.
 
+Props refers to properties. They are objects or values that are passed down to components on. Props is the way that components are able to share data and state in react. 
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+Side effects are things that happen beyond the scope of running a function, they may refer to API calls to fetch data or logging events that heppen within the DOM. Side effects are synced in react components by declaring the side effect within the component and assigning the side effect to perform a task outside the components scope.
 
 ## Project Set Up
 
