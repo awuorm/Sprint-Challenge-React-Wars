@@ -1,42 +1,51 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-import './App.css';
-import CharactersContent from './components/Characters/CharactersContent';
+import "./App.css";
 import Loading from "./components/Characters/Loading";
+import Buttons from "./components/Pagination/Button";
+import CharactersArray from "./components/Characters/CharArray";
 
-    
-  const App = () => {
-      //Creating state for the pulled data
-    const [characters, setCharacters] = useState([]);
-    const [isLoading, setLoading] = useState(true);
-    //Passing the data to state
-    useEffect(() => {
-        axios.get("https://swapi.co/api/people/")
-        .then((response) => {
-          setCharacters(response.data.results);
-          setLoading(false);
-        })
-        .catch((error) => {
-          setLoading(true);
-          return error;
-        })   
-  },[])
+const App = () => {
+  //Creating state
+  const [characters, setCharacters] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+  const [nextPage, setNext] = useState("https://swapi.co/api/people/");
+  const [pagenumber, setPageNo] = useState(1);
+
+  //Fetching the data using pagination
+  const changePage = () => {
+    setPageNo(pagenumber + 1);
+    setNext("https://swapi.co/api/people/?Page=" + pagenumber);
+    console.log("Page is", pagenumber);
+    console.log("next page is ", nextPage);
+  };
+
+  useEffect(() => {
+    axios
+      .get(nextPage)
+      .then(response => {
+        setCharacters(response.data.results);
+        setLoading(false);
+      })
+      .catch(error => {
+        setLoading(true);
+        return error;
+      });
+  }, [nextPage]);
   //rendering the components
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      {isLoading?
-        (<Loading/>):
-        (characters.map((character,index) => {
-          return (
-            <CharactersContent 
-            key={index} 
-            characters={character}/>
-          )
-          }))
-      }
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <CharactersArray characters={characters} />
+          <Buttons onClick={changePage} />
+        </>
+      )}
     </div>
   );
-}
+};
 export default App;
