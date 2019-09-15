@@ -21,11 +21,11 @@ function CharactersContent (props) {
     //rendering the components
     return (
                 <DivCharStyles>
-                    <CharName charname={props.characters.name}/>
-                    <CharactersHeight charheight={props.characters.height}/>
-                    <CharactersMass charmass={props.characters.mass}/>
-                    <CharactersGender chargender={props.characters.gender}/>
-                    <CharactersHome charhome={props.characters.homeworld}/> 
+                    <CharName charname={props.character.name}/>
+                    <CharactersHeight charheight={props.character.height}/>
+                    <CharactersMass charmass={props.character.mass}/>
+                    <CharactersGender chargender={props.character.gender}/>
+                    <CharactersHome charhome={props.character.homeworld}/> 
                 </DivCharStyles>
     )
 }
